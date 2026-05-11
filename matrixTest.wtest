@@ -1,9 +1,17 @@
+import matrix.*
 
+describe "Test de la nave" {
 
-describe "group of tests " {
-
-  test "test 01" {
-    assert.equals(100, 50+50)
+  test "La cantidad de pasajeros a bordo de la nave son 3" {
+    assert.equals(3, nave.nroPasajeros())
   }
-
+  test "El pasajero con mas vitalidad es neo" {
+    assert.equals(neo, nave.elPasajeroConMasVitalidad())
+  }
+  test "No es cierto que, ningun pasajero tiene mas del doble de vitalidad que otro pasajero" {
+    assert.notThat(nave.estaEquilibrada())
+  }
+  test "Esta el elegido a bordo de la nave" {
+    assert.that(nave.estaElElegidoABordo())
+  }
 }
